@@ -362,7 +362,6 @@
 /* Dropdown */
 select {
   height: $dt-input-height;
-  width: 100%;
   font-size: $dt-text-base;
   padding: 0 $dt-spacing-2 0 $dt-spacing-2;
   background-color: $dt-white-bg;
@@ -379,6 +378,16 @@ select {
     box-shadow: 0 0 0 3px $dt-blue-shadow-10;
     outline: 3px solid transparent;
   }
+
+  &.active {
+    border-color: $dt-green-stroke;
+    background-color: $dt-green-bg-50;
+    color: $dt-green-text;
+  }
+}
+
+select option {
+  background-color: $dt-white-bg;
 }
 
 /* Input with Icon : Disabled */
@@ -536,5 +545,57 @@ table.dt-table {
 
   tr:last-child td {
     border-bottom: 0;
+  }
+}
+
+/* Job Buttons */
+.dt-job-btn {
+  @include flexCenter($content: space-between);
+  padding: $dt-spacing-4 $dt-spacing-4 $dt-spacing-4 $dt-spacing-8;
+  background-color: $dt-white-bg;
+  border-radius: $dt-rounded-2xl;
+  font-size: $dt-text-heading-4;
+  width: 340px;
+  box-shadow: $dt-shadow-base;
+  cursor: pointer;
+
+  transition-property: box-shadow;
+  transition-duration: 100ms;
+
+  &.dt-job-btn:hover {
+    box-shadow: $dt-shadow-lg;
+  }
+}
+
+/* Toaster */
+.dt-toaster {
+  @include flexCenter($gap: $dt-spacing-1-5);
+  padding: $dt-spacing-4;
+  border-radius: $dt-rounded-lg;
+  background-color: $dt-badge-info-bg;
+  color: $dt-badge-info-text;
+
+  &.dt-toaster--success {
+    color: $dt-badge-success-text;
+    background-color: $dt-badge-success-bg;
+    border: 1.5px solid $dt-green-stroke-50;
+  }
+
+  &.dt-toaster--info {
+    color: $dt-badge-info-text;
+    background-color: $dt-badge-info-bg;
+    border: 1.5px solid $dt-blue-stroke-50;
+  }
+
+  &.dt-toaster--warning {
+    color: $dt-badge-warning-text;
+    background-color: $dt-badge-warning-bg;
+    border: 1.5px solid $dt-orange-stroke-50;
+  }
+
+  &.dt-toaster--error {
+    color: $dt-badge-error-text;
+    background-color: $dt-badge-error-bg;
+    border: 1.5px solid $dt-red-stroke-50;
   }
 }

@@ -1,6 +1,12 @@
 $dt-font-weight-bold: 600;
 $dt-input-height: 40px;
 
+/* Shadow Sizes */
+$dt-shadow-base: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+  0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+$dt-shadow-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+
 /* Text Sizes */
 $dt-text-xs: 12px;
 $dt-text-sm: 14px;
@@ -60,7 +66,11 @@ $dt-dark-blue-hover: #161358;
 /* Stroke Colors */
 $dt-gray-stroke: #e2e8f0;
 $dt-blue-stroke: #2563eb;
+$dt-green-stroke: #22c55e;
 $dt-blue-stroke-50: #92b1f5;
+$dt-green-stroke-50: #83dfa5;
+$dt-orange-stroke-50: #f4c577;
+$dt-red-stroke-50: #f69797;
 
 /* Badge Colors */
 $dt-badge-success-bg: #e4f8ec;
